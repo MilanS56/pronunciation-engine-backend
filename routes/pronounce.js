@@ -22,7 +22,7 @@ router.post("/:word", upload.single("audio"), async (req, res) => {
 
   const target = req.params.word;
 
-  const py = spawn(PYTHON, ["-3", "ai/transcribe.py", req.file.path]);;
+  const py = spawn("python3", ["ai/transcribe.py", req.file.path]);
 
   console.log("🐍 Python started");
 

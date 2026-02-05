@@ -1,9 +1,10 @@
 const express = require("express");
 const cors = require("cors");
 const pronounce = require("./routes/pronounce");
-app.use(express.json());
+
 
 const app = express();
+app.use(express.json());
 const PORT = process.env.PORT || 5000;
 app.use(cors({
   origin: [

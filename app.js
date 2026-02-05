@@ -11,4 +11,4 @@ app.use(cors({
 
 app.use("/api/pronounce", pronounce);
 
-app.listen(5000, () => console.log("AI server running on 5000"));
+app.listen(PORT, () => console.log("Server Running"));

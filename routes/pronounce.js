@@ -32,9 +32,7 @@ router.post("/:word", upload.single("audio"), async (req, res) => {
     transcript += data.toString();
   });
 
-  py.stderr.on("data", err => {
-    console.error("🐍 Python error:", err.toString());
-  });
+ py.stderr.on("data", err => console.log("🐍 Python:", err.toString()));
 
   py.on("close", async code => {
     console.log("🐍 Python exited with", code);

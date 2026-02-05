@@ -1,4 +1,4 @@
 openai-whisper
-ffmpeg-python
 torch
 numpy
+ffmpeg-python
